@@ -1,0 +1,21 @@
+#Butilca Rares
+
+This is the implementation of a client-server communication.
+
+The server represents a platform where messages can be published by UDP clients on different topics.
+These messages can be seen by TCP clients that have subscribed to those topics.
+
+The UDP client has not been implemented in this skel.
+
+The TCP client can run the following commands:
+-> subscribe topic SF
+SF=1 means that the messages are stored for when the client is offline,
+and SF=0 means they are not
+
+-> unsubscribe topic
+
+-> exit
+this command will logout the client
+
+The server will not run any commands, its only job being to receive messages and forward them to
+various subscribers.
